@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--@elvariable id="ticketDatabase" type="java.util.Map<Integer, com.wrox.Ticket>"--%>
-
 <%@ page import="com.farata.SecurityServiceDAO" %>
 <%@ page import="com.farata.dto.UserInfoFirstLastNameDTO" %>
 <%@ page import="java.util.List" %>
@@ -35,6 +33,7 @@
         session.setAttribute("unlock_userEmail", request.getParameter("userEmail"));
         String bgaIdReq = request.getParameter("bgaId");
         long bgaIdLong = (bgaIdReq == null || bgaIdReq.isEmpty()) ? 0 : Long.parseLong(bgaIdReq);
+
         if ("producer".equals(type)) {
             String bgaNameReq = request.getParameter("bgaName");
             bgaNameReq = (bgaNameReq == null) ? "" : bgaNameReq;
@@ -50,18 +49,14 @@
         if (userInfoNameList.size() == 0){
             pageContext.setAttribute("message", USERID_NOT_FOUND);
         }
-
     }
-    pageContext.setAttribute("userInfo", userInfoNameList);
 
+    pageContext.setAttribute("userInfo", userInfoNameList);
 
     if ("unlock".equals(action)) {
 
         String userIdReq = request.getParameter("userId");
         long userIdLong = (userIdReq == null || userIdReq.isEmpty()) ? 0 : Long.parseLong(userIdReq);
-
-
-
         List<UserInfoDTO> userInfoList = securityService.getUserInfo(userIdLong);
         if (userInfoList.size() == 1) {
             UserInfoDTO userInfo = userInfoList.get(0);
