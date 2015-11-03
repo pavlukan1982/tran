@@ -3,11 +3,11 @@ package com.farata.dto;
 /**
  * Created by andrei on 16.10.2015.
  */
-public class UserInfoDTO {
+public class UserLookupDTO {
 
     private long id;
 
-    public UserInfoDTO(long id) {
+    public UserLookupDTO(long id) {
         this.id = id;
     }
 

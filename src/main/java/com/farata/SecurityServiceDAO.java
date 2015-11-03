@@ -1,7 +1,6 @@
 package com.farata;
 
-import com.farata.dto.UserInfoDTO;
-import com.farata.dto.UserInfoFirstLastNameDTO;
+import com.farata.dto.UserLookupDTO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,31 +9,16 @@ import java.util.List;
  * Created by andrei on 16.10.2015.
  */
 public class SecurityServiceDAO {
-    public List<UserInfoFirstLastNameDTO> getUserInfoByProducerBgaId(long producerId, long bgaId, String bgaName){
-
-
-        List<UserInfoFirstLastNameDTO> lst =  new ArrayList<>();
-        if (producerId >= 1 ){
-            lst.add(new UserInfoFirstLastNameDTO(10, "Andrew", "Baltimor"));
-        }
-
-        if (producerId >= 2) {
-            lst.add(new UserInfoFirstLastNameDTO(10, "Eva", "Polna"));
-        }
-
-        return lst;
-    }
-
-    public List<UserInfoFirstLastNameDTO> getUserInfoByUserBgaId(String userEmail, long bgaId){
+    public List<UserLookupDTO> getUserByProducerIdAndBga(long producerId, long bgaId, String bgaName){
         return new ArrayList<>();
     }
 
-    public List<UserInfoDTO> getUserInfo(long userId){
+    public List<UserLookupDTO> getUserInfo(long userId){
 
-        List<UserInfoDTO> lst = new ArrayList<UserInfoDTO>();
-        lst.add(new UserInfoDTO(10));
+        List<UserLookupDTO> lst = new ArrayList<UserLookupDTO>();
+        lst.add(new UserLookupDTO(10));
         return lst;
     }
 
-    public void getUserInfo_update(UserInfoDTO userInfo, String prop){}
+    public void getUserInfo_update(UserLookupDTO userInfo, String prop){}
 }
