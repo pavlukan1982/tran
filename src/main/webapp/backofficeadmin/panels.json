@@ -1,0 +1,66 @@
+[
+  {
+    "id": "admin",
+    "header": "Admin",
+    "roles": ["admin"],
+    "panelItemList": [
+      {
+        "id": "user_lookup",
+        "actionString": "user_lookup",
+        "header": "User lookup (unlock, password reset)",
+        "roles": ["analyzer","admin"]
+      },
+      {
+        "id": "password_reset_",
+        "actionString": "jsp",
+        "header": "Password reset",
+        "roles": ["analyzer","admin"]
+      }/*,
+      {
+        "id": "airmen",
+        "header": "Airmen",
+        "roles": ["analyzer"],
+        "url": "admin/airmen.jsp"
+      },
+      {
+        "id": "adminItem3",
+        "header": "Admin Item 3",
+        "url": "someurl"
+      },
+      {
+        "id": "adminItem4",
+        "header": "Admin Item 4",
+        "url": "someurl"
+      }*/
+    ]
+  },
+  {
+    "id": "database",
+    "header": "Database",
+    "roles": ["admin"],
+    "panelItemList": [
+      {
+        "id": "dbItem1",
+        "header": "DB Item 1",
+        "url": "someurl"
+      },
+      {
+        "id": "dbItem2",
+        "header": "DB Item 2",
+        "roles": ["dba"],
+        "url": "someurl-2"
+      },
+      {
+        "id": "dbItem3",
+        "header": "DB Item 3",
+        "roles": ["analyzer"],
+        "url": "someurl"
+      },
+      {
+        "id": "dbItem4",
+        "header": "DB Item 4",
+        "url": "someurl"
+      }
+    ]
+  }
+]
