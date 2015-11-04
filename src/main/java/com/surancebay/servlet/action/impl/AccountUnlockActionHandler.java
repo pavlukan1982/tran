@@ -2,6 +2,7 @@ package com.surancebay.servlet.action.impl;
 
 import com.farata.SecurityServiceDAO;
 import com.farata.dto.UserInfoDTO;
+import com.farata.dto.UserLookupDTO;
 import com.surancebay.servlet.action.ActionHandler;
 import com.surancebay.servlet.datamodel.AjaxServiceResult;
 import com.surancebay.servlet.service.AjaxService;

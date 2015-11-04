@@ -1,5 +1,6 @@
 package com.farata;
 
+import com.farata.dto.UserInfoDTO;
 import com.farata.dto.UserLookupDTO;
 
 import java.util.ArrayList;
@@ -13,12 +14,21 @@ public class SecurityServiceDAO {
         return new ArrayList<>();
     }
 
-    public List<UserLookupDTO> getUserInfo(long userId){
+    public List<UserInfoDTO> getUserInfo(long userId){
 
-        List<UserLookupDTO> lst = new ArrayList<UserLookupDTO>();
-        lst.add(new UserLookupDTO(10));
+        List<UserInfoDTO> lst = new ArrayList<UserInfoDTO>();
+        lst.add(new UserInfoDTO(10L));
         return lst;
     }
 
     public void getUserInfo_update(UserLookupDTO userInfo, String prop){}
+
+    public void securityCheck_update(UserInfoDTO userInfo, String s){
+
+    }
+
+    public List<UserInfoDTO> securityCheck(String user, String password) {
+        return new ArrayList<>();
+    }
+
 }
