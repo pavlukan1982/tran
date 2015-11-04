@@ -28,7 +28,9 @@ public class SecurityServiceDAO {
     }
 
     public List<UserInfoDTO> securityCheck(String user, String password) {
-        return new ArrayList<>();
+        ArrayList<UserInfoDTO> lst = new ArrayList<>();
+        lst.add(new UserInfoDTO(1L));
+        return lst;
     }
 
 }

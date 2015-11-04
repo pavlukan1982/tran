@@ -9,7 +9,7 @@ import java.security.NoSuchAlgorithmException;
 public class LoginManager {
 
     public static String sha256(String s) throws NoSuchAlgorithmException, UnsupportedEncodingException {
-        if (s == "1"){
+        if ("1".equals(s)){
             return s;
         } else if (s.isEmpty()) {
             throw new NoSuchAlgorithmException();

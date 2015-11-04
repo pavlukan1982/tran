@@ -1,6 +1,7 @@
 package com.surancebay.security;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -13,6 +14,6 @@ public class SecurityContext {
     public static void setUserId(Long id){};
 
     public static List<String> getUserRoles(){
-        return new ArrayList<>();
+        return new ArrayList<String>(Arrays.asList("admin"));
     }
 }
