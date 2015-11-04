@@ -11,7 +11,7 @@
     <title><c:out value="${pageTitle}"/></title>
 </head>
 <link rel="stylesheet" type="text/css" href="/sbweb/stylesheets/bootstrap.min.css "/>
-<link rel="stylesheet" type="text/css" href="/sbweb/backofficeadmin/control.css"/>
+<link rel="stylesheet" type="text/css" href="/backofficeadmin/control.css"/>
 <script src="/sbweb/scripts/boadmin/boa.js"></script>
 <body>
 
