@@ -10,9 +10,24 @@
 		<servlet-name>BackOfficeAdmin</servlet-name>
 		<servlet-class>com.surancebay.servlet.BackOfficeAdminServlet</servlet-class>
 	</servlet>
+
 	<servlet-mapping>
 		<servlet-name>BackOfficeAdmin</servlet-name>
 		<url-pattern>/BackOfficeAdmin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RestApplication</servlet-name>
+		<servlet-class>com.surancebay.testrest.BackOfficeAdminJaxrs</servlet-class>
+		<init-param>
+			<param-name>jaxrs.serviceClasses</param-name>
+			<param-value>com.surancebay.testrest.RestResource</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RestApplication</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
 
 	<security-constraint>
