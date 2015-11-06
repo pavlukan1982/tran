@@ -30,6 +30,21 @@
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>RestApplicationAdd</servlet-name>
+		<servlet-class>com.surancebay.testrest.AdditionalRest</servlet-class>
+		<init-param>
+			<param-name>jaxrs.serviceClasses</param-name>
+			<param-value>com.surancebay.testrest.RestResourseAdd</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RestApplicationAdd</servlet-name>
+		<url-pattern>/addition/*</url-pattern>
+	</servlet-mapping>
+
+
 	<security-constraint>
   		<web-resource-collection>
    			<web-resource-name>Admin pages</web-resource-name>
