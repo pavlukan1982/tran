@@ -1,8 +1,10 @@
 package com.surancebay.testrest;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import org.apache.cxf.jaxrs.ext.MessageContext;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
+
 
 /**
  * Created by pavlyukevich on 05.11.2015.
@@ -11,9 +13,17 @@ import javax.ws.rs.Produces;
 @Path("/test")
 public class RestResource {
 
+    @Context
+    private MessageContext mc;
+
     @GET
-    @Produces("text/plain")
-    public String getTest() {
-        return "Hello!";
+    @Path("{name}")
+    public String getTest(@PathParam("name") String name) {
+        return "Hello " + name + "!";
+    }
+
+    @GET
+    public String getTestParam(@QueryParam("name") String name) {
+        return "Hello " + name + "!!!";
     }
 }
