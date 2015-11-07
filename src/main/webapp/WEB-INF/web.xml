@@ -32,10 +32,14 @@
 
 	<servlet>
 		<servlet-name>RestApplicationAdd</servlet-name>
-		<servlet-class>com.surancebay.testrest.AdditionalRest</servlet-class>
+		<servlet-class>com.surancebay.testrest.ExtendedJaxrsServlet</servlet-class>
 		<init-param>
 			<param-name>jaxrs.serviceClasses</param-name>
-			<param-value>com.surancebay.testrest.RestResourseAdd</param-value>
+			<param-value>com.surancebay.testrest.RestResourceAdd</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jaxrs.comparator</param-name>
+			<param-value>com.surancebay.testrest.QueryMatcher</param-value>
 		</init-param>
 	</servlet>
 
