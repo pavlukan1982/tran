@@ -1,6 +1,7 @@
 package com.surancebay.testrest;
 
 import org.apache.cxf.helpers.CastUtils;
+import org.apache.cxf.interceptor.security.SimpleAuthorizingInterceptor;
 import org.apache.cxf.jaxrs.JAXRSServerFactoryBean;
 import org.apache.cxf.jaxrs.servlet.CXFNonSpringJaxrsServlet;
 
@@ -17,6 +18,9 @@ public class ExtendedJaxrsServlet extends CXFNonSpringJaxrsServlet{
         super.setExtensions(bean, servletConfig);
 
         bean.setResourceComparator(new QueryMatcher());
+
+        bean.getInInterceptors().add(new SimpleAuthorizingInterceptor());
+
     }
 
 
