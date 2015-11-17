@@ -23,6 +23,10 @@
 			<param-name>javax.ws.rs.Application</param-name>
 			<param-value>com.surancebay.backofficeadmin.BackOfficeAdminApp</param-value>
 		</init-param>
+		<init-param>
+			<param-name>jaxrs.inInterceptors</param-name>
+			<param-value>com.surancebay.backofficeadmin.rest.security.ContextLogginIntercepter</param-value>
+		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
