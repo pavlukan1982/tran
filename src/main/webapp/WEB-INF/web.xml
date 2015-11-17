@@ -1,8 +1,8 @@
 <web-app xmlns="http://java.sun.com/xml/ns/javaee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-         id="WebApp_ID" version="3.0"
-         metadata-complete="true">
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+		 id="WebApp_ID" version="3.0"
+		 metadata-complete="true">
 
 
 
@@ -14,6 +14,32 @@
 		<servlet-name>BackOfficeAdmin</servlet-name>
 		<url-pattern>/BackOfficeAdmin</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<display-name>BackOfficeAdminRest</display-name>
+		<servlet-name>BackOfficeAdminRest</servlet-name>
+		<servlet-class>org.apache.cxf.jaxrs.servlet.CXFNonSpringJaxrsServlet</servlet-class>
+		<init-param>
+			<param-name>javax.ws.rs.Application</param-name>
+			<param-value>com.surancebay.backofficeadmin.BackOfficeAdminApp</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BackOfficeAdminRest</servlet-name>
+		<url-pattern>/boarest/*</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>BoaSecurityFilter</filter-name>
+		<filter-class>com.surancebay.backofficeadmin.security.BoaSecurityFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>BoaSecurityFilter</filter-name>
+		<url-pattern>/BackOfficeAdmin/*</url-pattern>
+		<url-pattern>/boa/*</url-pattern>
+	</filter-mapping>
 
 	<security-constraint>
   		<web-resource-collection>
