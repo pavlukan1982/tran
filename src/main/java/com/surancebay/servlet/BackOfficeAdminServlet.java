@@ -31,8 +31,7 @@ public class BackOfficeAdminServlet extends HttpServlet {
         actionsMap.put(Action.SHOW_CONTROL_PANEL, new MainPageActionHandler());
         actionsMap.put(Action.JSP, new JspActionHandler());
         actionsMap.put(Action.USER_LOOKUP, new UserLookupActionHandler());
-        actionsMap.put(Action.PASSWORD_RESET, new PasswordResetActionHandler());
-        actionsMap.put(Action.ACCOUNT_UNLOCK, new AccountUnlockActionHandler());
+        actionsMap.put(Action.USER_LOOKUP_BGA, new UserLookupBgaActionHandler());
     }
 
     @Override
@@ -61,9 +60,9 @@ public class BackOfficeAdminServlet extends HttpServlet {
         if (inputEmail == null) {
             action = Action.LOGIN;
         } else {
-            req.setAttribute(ServletSettings.USERNAME_PARAM_NAME,inputEmail);
+            req.setAttribute(ServletSettings.USERNAME_PARAM_NAME, inputEmail);
         }
-        LOGGER.debug("action: "+action);
+        LOGGER.debug("action: " + action);
 
         actionsMap.get(action).handle(req, resp);
     }

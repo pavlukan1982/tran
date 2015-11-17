@@ -14,8 +14,12 @@ public class SecurityServiceDAO {
         return new ArrayList<>();
     }
 
-    public List<UserInfoDTO> getUserInfo(long userId){
+    public List<UserLookupDTO> getUserByBgaAdminEmailOrId(String gaEmail, long gaId) {
+        return new ArrayList<>();
+    }
 
+
+    public List<UserInfoDTO> getUserInfo(long userId){
         List<UserInfoDTO> lst = new ArrayList<UserInfoDTO>();
         lst.add(new UserInfoDTO(10L));
         return lst;

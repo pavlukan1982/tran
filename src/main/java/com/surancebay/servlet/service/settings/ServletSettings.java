@@ -7,21 +7,24 @@ import com.surancebay.servlet.action.enums.Action;
  */
 public class ServletSettings {
     public static final String SERVLET_DOMAIN = "/sbweb";
+    public static final String MAIN_SERVLET = "/BackOfficeAdmin";
     public static final String MAIN_SERVLET_PATH = SERVLET_DOMAIN + "/BackOfficeAdmin";
     public static final String JSP_PAGE_PREFIX = "/admin";
     public static final String TEMPLATE_PAGE_PREFIX = "/backofficeadmin";
     public static final String TEMPLATE_PAGE_SUFFIX = ".jsp";
 
+    public static final String REST_SERVICE_PATH = SERVLET_DOMAIN + "/boarest";
+    public static final String REST_LOOKUP_SERVICE_PATH = REST_SERVICE_PATH + "/lookup";
+    public static final String REST_UNLOCK_ACCOUNT_SERVICE_PATH = REST_SERVICE_PATH + "/unlockaccount";
+
+    public static final String UNLOCK_ACCOUNT_SERVICE_NAME = "unlockAccount";
+
     public static final String USERNAME_PARAM_NAME = "username";
     public static final String MESSAGE_ALERT_PARAM_NAME = "alertMessage";
-    public static final String MESSAGE_INFO_PARAM_NAME = "infoMessage";
     public static final String INPUT_USERNAME_PARAM_NAME = "emailValue";
     public static final String INPUT_PASSWORD_PARAM_NAME = "passwordValue";
 
     public static final String SERVICE_URL_PARAM_NAME = "serviceUrl";
-
-    public static final String UNLOCK_ACCOUNT_ACTION_NAME = "unlockAccountAction";
-    public static final String RESET_PASSWORD_ACTION_NAME = "resetPasswordActionAction";
 
     public static final String LOGIN_PAGE = "loginPanel";
     public static final String MAIN_PAGE = "mainPanel";
@@ -30,10 +33,10 @@ public class ServletSettings {
     public static final String MAIN_PAGE_TITLE = "Back Office Admin";
 
     public static final String USER_LOOKUP_PAGE = "userLookup";
+    public static final String USER_LOOKUP_BGA_PAGE = "userLookupBga";
 
     public static final String ACTION_PARAM_NAME = "action";
     public static final String PAGE_TITLE_PARAM_NAME = "pageTitle";
-
 
     public static final String PANELS_JSON_SOURCE_FILE = TEMPLATE_PAGE_PREFIX + "/panels.json";
     public static final String PANELS_DATA_ATTRIBUTE_NAME = "panelsData";

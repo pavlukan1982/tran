@@ -10,6 +10,5 @@ public enum Action {
     SHOW_CONTROL_PANEL,
     JSP,
     USER_LOOKUP,
-    PASSWORD_RESET,
-    ACCOUNT_UNLOCK
+    USER_LOOKUP_BGA
 }

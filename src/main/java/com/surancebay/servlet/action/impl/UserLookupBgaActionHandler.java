@@ -14,18 +14,18 @@ import java.io.IOException;
 /**
  * Created by Viachaslau Parfenchyk on 22.09.2015.
  */
-public class UserLookupActionHandler implements ActionHandler {
-    private static final Logger LOGGER = LoggerFactory.getLogger(UserLookupActionHandler.class);
+public class UserLookupBgaActionHandler implements ActionHandler {
+    private static final Logger LOGGER = LoggerFactory.getLogger(UserLookupBgaActionHandler.class);
 
     @Override
     public void handle(HttpServletRequest req, HttpServletResponse resp) {
-        LOGGER.debug("UserLookupActionHandler");
+        LOGGER.debug("UserLookupBgaActionHandler");
 
         req.setAttribute(ServletSettings.SERVICE_URL_PARAM_NAME, ServletSettings.REST_LOOKUP_SERVICE_PATH);
         req.setAttribute(ServletSettings.UNLOCK_ACCOUNT_SERVICE_NAME, ServletSettings.REST_UNLOCK_ACCOUNT_SERVICE_PATH);
 
         RequestDispatcher dispatcher = req
-                .getRequestDispatcher(ServletSettings.getTemplateName(ServletSettings.USER_LOOKUP_PAGE));
+                .getRequestDispatcher(ServletSettings.getTemplateName(ServletSettings.USER_LOOKUP_BGA_PAGE));
         try {
             dispatcher.forward(req, resp);
         } catch (ServletException e) {

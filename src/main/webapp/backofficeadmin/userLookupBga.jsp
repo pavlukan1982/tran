@@ -8,27 +8,24 @@
 
         <h2 class="form-heading">Please enter detail information</h2>
 
-        <div id="formProducer" class="panel panel-default">
-            <div class="panel-heading">Lookup by Producer</div>
+        <div id="formAgency" class="panel panel-default">
+            <div class="panel-heading">Lookup by Admin</div>
             <div class="panel-body">
-                <form id="userLookup" class="form-inline" method="post">
+                <form id="userLookupAgency" class="form-inline" method="post">
+
                     <div class="form-group">
-                        <label for="producerId">Producer Id</label>
-                        <input type="text" id="producerId" name="producerId" class="form-control"
-                               placeholder="Producer Id" size="10" required autofocus>
+                        <label for="gaId_agency">Agency Id</label>
+                        <input type="text" id="gaId_agency" name="gaId" class="form-control"
+                               placeholder="Agency Id" size="10"">
                     </div>
                     <div class="form-group">
-                        <label for="gaId_producer">Agency Id</label>
-                        <input type="text" id="gaId_producer" name="gaId" class="form-control"
-                               placeholder="Agency Id" size="10">
+                        <label for="gaEmail">Agency admin Email</label>
+                        <input type="text" id="gaEmail" name="gaEmail" class="form-control"
+                               placeholder="Agency admin Email">
                     </div>
-                    <div class="form-group">
-                        <label for="gaName">Agency Name</label>
-                        <input type="text" id="gaName" name="gaName" class="form-control" placeholder="Agency Name">
-                    </div>
-                    <input type="hidden" name="lookupType" value="producer"/>
-                    <button id="submitProducer" onclick="javascript:return submitForm()" class="btn btn-lg btn-primary">
-                        Lookup
+                    <input type="hidden" name="lookupType" value="admin"/>
+                    <button id="submitAgency" onclick="javascript:return submitFormAgency()"
+                            class="btn btn-lg btn-primary">Lookup
                     </button>
                 </form>
             </div>

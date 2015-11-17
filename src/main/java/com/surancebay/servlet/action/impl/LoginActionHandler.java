@@ -27,7 +27,7 @@ public class LoginActionHandler implements ActionHandler {
         String inputUsername = req.getParameter(ServletSettings.INPUT_USERNAME_PARAM_NAME);
         String inputPassword = req.getParameter(ServletSettings.INPUT_PASSWORD_PARAM_NAME);
         String errorMessage = (String) req.getAttribute(ServletSettings.MESSAGE_ALERT_PARAM_NAME);
-        if (errorMessage==null && inputUsername != null && !inputUsername.isEmpty()) {
+        if (errorMessage == null && inputUsername != null && !inputUsername.isEmpty()) {
             try {
                 inputPassword = LoginManager.sha256(inputPassword);
             } catch (NoSuchAlgorithmException e) {

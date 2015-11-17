@@ -7,11 +7,17 @@
       {
         "id": "user_lookup",
         "actionString": "user_lookup",
-        "header": "User lookup (unlock, password reset)",
+        "header": "User lookup by producer and agency",
         "roles": ["analyzer","admin"]
       },
       {
-        "id": "password_reset_",
+        "id": "user_lookup_bga",
+        "actionString": "user_lookup_bga",
+        "header": "Admin lookup by email or id",
+        "roles": ["analyzer","admin"]
+      },
+      {
+        "id": "password_reset",
         "actionString": "jsp",
         "header": "Password reset",
         "roles": ["analyzer","admin"]

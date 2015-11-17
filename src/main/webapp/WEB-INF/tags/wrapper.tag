@@ -1,7 +1,7 @@
-<%@tag description="Main Wrapper Tag" pageEncoding="UTF-8"%>
+<%@tag description="Main Wrapper Tag" pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@attribute name="pageTitle"%>
-<%@attribute name="username"%>
+<%@attribute name="pageTitle" %>
+<%@attribute name="username" %>
 
 <c:set var="homePageUrl">BackOfficeAdmin</c:set>
 <c:set var="logoutPageUrl">${homePageUrl}?action=logout</c:set>
@@ -9,10 +9,11 @@
 <html>
 <head>
     <title><c:out value="${pageTitle}"/></title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <link rel="stylesheet" type="text/css" href="/sbweb/stylesheets/bootstrap.min.css "/>
+    <link rel="stylesheet" type="text/css" href="/sbweb/backofficeadmin/control.css"/>
+    <script src="/sbweb/scripts/boadmin/boa.js"></script>
 </head>
-<link rel="stylesheet" type="text/css" href="/sbweb/stylesheets/bootstrap.min.css "/>
-<link rel="stylesheet" type="text/css" href="/backofficeadmin/control.css"/>
-<script src="/sbweb/scripts/boadmin/boa.js"></script>
 <body>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">

@@ -1,5 +1,6 @@
 package com.surancebay.servlet.action.impl;
 
+import com.surancebay.security.SecurityContext;
 import com.surancebay.servlet.action.ActionHandler;
 import com.surancebay.servlet.service.settings.ServletSettings;
 import org.slf4j.Logger;
@@ -18,6 +19,7 @@ public class LogoutActionHandler implements ActionHandler {
     public void handle(HttpServletRequest req, HttpServletResponse resp) {
         LOGGER.debug("LogoutActionHandler");
 
+        SecurityContext.clean();
         req.getSession().removeAttribute(ServletSettings.INPUT_USERNAME_PARAM_NAME);
 
         new LoginActionHandler().handle(req, resp);

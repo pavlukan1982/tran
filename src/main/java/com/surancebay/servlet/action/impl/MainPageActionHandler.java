@@ -19,6 +19,7 @@ import java.io.IOException;
  */
 public class MainPageActionHandler implements ActionHandler {
     private static final Logger LOGGER = LoggerFactory.getLogger(MainPageActionHandler.class);
+    public static final int PARAMS_LIMIT = 2;
 
     private static PanelService panelService = PanelServiceImpl.getInstance();
 
